@@ -76,8 +76,25 @@ img{
     width: min(90rem, 90%);
     margin-inline: auto;
 }
-.cont-imgs{
-    z-index: -10;
+/*Slider*/
+.cont-slider{
+    position: relative;
+}
+.arrows{
+    position: absolute;
+    top:42%;
+    transition: stroke .4s ease, scale .4s ease ;
+}
+.arrows:hover {
+    stroke:var(--primario);
+    cursor: pointer;
+    scale: 1.15;
+}
+.arrow-left{
+    left: 0;
+}
+.arrow-right{  
+    right: 0;
 }
 .header{
     width: 100%;
