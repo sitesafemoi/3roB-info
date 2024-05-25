@@ -82,6 +82,7 @@ img{
 /*Slider*/
 .cont-slider{
     position: relative;
+    max-height: 65rem;
 }
 .arrows{
     position: absolute;
