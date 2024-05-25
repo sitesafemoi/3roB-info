@@ -76,6 +76,9 @@ img{
     width: min(90rem, 90%);
     margin-inline: auto;
 }
+.enabled{
+    display: none;
+}
 /*Slider*/
 .cont-slider{
     position: relative;
