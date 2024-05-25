@@ -82,7 +82,10 @@ img{
 /*Slider*/
 .cont-slider{
     position: relative;
-    max-height: 65rem;
+    height: auto;
+}
+.img-slider{
+    height: auto;
 }
 .arrows{
     position: absolute;
