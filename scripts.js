@@ -7,40 +7,51 @@ const ArrowRight = document.querySelector(".arrow-right")
 
 let i = 0;
 
+function PasarPrimeraIMG ()  {
+    ImgSlider[0].classList.toggle(`enabled`)
+    ImgSlider[1].classList.toggle(`enabled`)
+    i++;
+}
+function PasarSegundaIMG ()  {
+    ImgSlider[0].classList.toggle(`enabled`)
+    ImgSlider[2].classList.toggle(`enabled`)
+}
+
 ArrowLeft.addEventListener(`click`, () => {
-    if (i==0){
-        ImgSlider[0].classList.toggle(`enabled`)
-        ImgSlider[1].classList.toggle(`enabled`)
-        i++;
-        return
-    }
-    if(i==3){
-        ImgSlider[0].classList.toggle(`enabled`)
-        ImgSlider[2].classList.toggle(`enabled`)
-        i = 0;
-        return
-    }
+
+    switch (i) {
+        case 0:
+            PasarPrimeraIMG();
+            break;
+        case 3:
+            PasarSegundaIMG();
+            i = 0;
+         break;
+        default:
+            i==0;
+          break;
+      }
 })
 
 ArrowRight.addEventListener(`click`, () => {
-    if (i==0){
-        ImgSlider[0].classList.toggle(`enabled`)
-        ImgSlider[2].classList.toggle(`enabled`)
-        i = i + 3 ;
-        return
-    }
-    if (i==1){
-        ImgSlider[0].classList.toggle(`enabled`)
-        ImgSlider[1].classList.toggle(`enabled`)
-        i++;
-        return
-    }
-    if (i==2){
-        ImgSlider[0].classList.toggle(`enabled`)
-        ImgSlider[2].classList.toggle(`enabled`)
-        i++;
-        return
-    }
+
+    switch (i) {
+        case 0:
+            PasarSegundaIMG();
+            i = i + 3 ;
+            break;
+        case 1:
+            PasarPrimeraIMG();
+          break;
+        case 2:
+            PasarSegundaIMG();
+            i++;
+            break;
+        default:
+            i==0;
+          break;
+      }
+
 })
 
 // ContSlider.style.transform = "transalateX(-200%)"
