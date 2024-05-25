@@ -7,6 +7,31 @@ const ArrowRight = document.querySelector(".arrow-right")
 
 let i = 0;
 
+// Cambio automatico
+setInterval(() => {
+    switch (i) {
+        case 0:
+            PasarPrimeraIMG();
+        break;
+        case 1:
+            PasarPrimeraIMG();
+        break;
+        case 2:
+            PasarSegundaIMG();
+            i++;
+        break;
+        case 3:
+            PasarSegundaIMG();
+            i=0;
+        break;
+        default:
+            i=0;
+            break;
+    }
+}, 5000);
+
+
+
 function PasarPrimeraIMG ()  {
     ImgSlider[0].classList.toggle(`enabled`)
     ImgSlider[1].classList.toggle(`enabled`)
