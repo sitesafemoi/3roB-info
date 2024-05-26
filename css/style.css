@@ -240,6 +240,7 @@ img{
 
 .footer p{
     font-size: 2rem;
+    text-align: center;
 }
 #a-footer{
     color: var(--primario);
