@@ -191,6 +191,15 @@ img{
     scale: 1.02;
     cursor: pointer;
 }
+.img-galeria-1{
+    animation: scale-img .6s linear alternate-reverse infinite;
+
+}
+@keyframes scale-img {
+    from {
+        scale: 1.02;
+    }
+}
 
 /*Estilos full galeria*/
 .cont-full-galeria{
