@@ -84,7 +84,7 @@ ArrowRight.addEventListener(`click`, () => {
 //*  Galeria 
 
 const ContGaleria = document.querySelector(".cont-full-galeria")
-const fullImg = document.querySelectorAll("#full-img")
+const fullImg = document.getElementById("full-img")
 
 
 function closeIMG() {
@@ -93,9 +93,5 @@ function closeIMG() {
 
 function openIMG(reference) {
     ContGaleria.style.display = `grid`;
-    
-    console.log(reference)
-    
     fullImg.src = reference;
-    console.log(fullImg.src)
 }
