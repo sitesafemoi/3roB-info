@@ -1,4 +1,4 @@
-// Slider
+// *Slider
 
 const ContSlider = document.querySelector(".cont-slider")
 const ImgSlider = document.querySelectorAll(".img-slider")
@@ -42,6 +42,8 @@ function PasarSegundaIMG ()  {
     ImgSlider[2].classList.toggle(`enabled`)
 }
 
+//Cambio con click
+
 ArrowLeft.addEventListener(`click`, () => {
 
     switch (i) {
@@ -79,4 +81,21 @@ ArrowRight.addEventListener(`click`, () => {
 
 })
 
-// ContSlider.style.transform = "transalateX(-200%)"
+//*  Galeria 
+
+const ContGaleria = document.querySelector(".cont-full-galeria")
+const fullImg = document.querySelectorAll("#full-img")
+
+
+function closeIMG() {
+    ContGaleria.style.display = `none`;
+}
+
+function openIMG(reference) {
+    ContGaleria.style.display = `grid`;
+    
+    console.log(reference)
+    
+    fullImg.src = reference;
+    console.log(fullImg.src)
+}
